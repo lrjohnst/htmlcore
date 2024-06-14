@@ -1,0 +1,35 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# Exclude all files in /storage/import/articles/ except example-articles.php
+/storage/import/articles/*
+!/storage/import/articles/example-articles.php
+
+# Exclude all files in /storage/import/pages/ except example-pages.php
+/storage/import/pages/*
+!/storage/import/pages/example-pages.php
+
+# Exclude all files in /resources/views/articles/ except new_york_architecture_18th_century.blade.php
+/resources/views/articles/*
+!/resources/views/articles/new_york_architecture_18th_century.blade.php
+
+# Exclude all files in /resources/views/pages/ except front_page_en.blade.php
+/resources/views/pages/*
+!/resources/views/pages/front_page_en.blade.php
