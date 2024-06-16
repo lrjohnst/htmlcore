@@ -1,4 +1,9 @@
 # Changelog
+## Version: v1.0.0 pre-alpha 2 [HtmlCoreServiceProvider failsafe]
+Date: 2024-06-16
+Collaborators: Lucas Johnston
+###
+Bugfix: Make HtmlCoreServiceProvider failsafe (it now breaks upon first install).
 ## Version: v1.0.0 pre-alpha 1 [Setting up deploy structure for first blog]
 Date: 2024-06-14
 Collaborators: Lucas Johnston

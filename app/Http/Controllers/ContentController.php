@@ -61,11 +61,11 @@ class ContentController extends Controller
     }
 
     public function showFrontPage(Request $request) {
-        $language = $this->getLanguageFromUrl($request) ?: config('ljb.default_language');
+        $language = $this->getLanguageFromUrl($request) ?: config('htmlcore.default_language');
 
         $content = Page::select('pages.*', 'contents.*')
             ->join('contents', 'pages.content_id', '=', 'contents.id')
-            ->where('contents.slug', config('ljb.front_page_' . $language))
+            ->where('contents.slug', config('htmlcore.front_page_' . $language))
             ->where('contents.lang_iso_639_1', $language)
             ->first();
 
