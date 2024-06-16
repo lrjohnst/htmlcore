@@ -22,15 +22,21 @@ class HtmlCoreServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Load LJB config via config file.
+        // Load HtmlCore config via config file.
         Config::set('htmlcore', require config_path('htmlcore.php'));
 
         // Load other HtmlCore settings via settings table in database.
-        if (Schema::hasTable('settings')) {
-            $settings = Setting::all();
-            foreach ($settings as $setting) {
-                Config::set('htmlcore.' . $setting->key, $setting->value);
+        try {
+            if (Schema::hasTable('settings')) {
+                $settings = Setting::all();
+                foreach ($settings as $setting) {
+                    Config::set('htmlcore.' . $setting->key, $setting->value);
+                }
             }
+        } catch (QueryException $e) {
+            // Handle the case where the database connection is not available or the table doesn't exist.
+            // Log the exception or perform other actions.
+            \Log::error('Could not load settings from the database: ' . $e->getMessage());
         }
     }
 }
