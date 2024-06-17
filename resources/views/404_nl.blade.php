@@ -20,9 +20,9 @@
 	<p>Direct naar:</p>
 
 	<ul>
+		<li><a href="/">Home</a></li>
 		<li><a href="/artikelen">Artikelen</a></li>
 	</ul>
 
-	<p>Of <a href="https://lucasjohnston.nl/over-lucas-johnston">neem contact op</a> om deze ontbrekende pagina te melden.</p>
 </body>
 </html>

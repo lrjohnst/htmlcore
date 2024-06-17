@@ -24,7 +24,7 @@ class ContentController extends Controller
         if($content) {
             return view('resource', compact('content'));
         } else {
-            return response()->view('404', [], 404);
+            return response()->view('404_' . $language, [], 404);
         }
     }
 
@@ -40,7 +40,7 @@ class ContentController extends Controller
         if($content) {
             return view('article', compact('content'));
         } else {
-            return response()->view('404', [], 404);
+            return response()->view('404_' . $language, [], 404);
         }
     }
 
@@ -56,7 +56,7 @@ class ContentController extends Controller
         if($content) {
             return view('page', compact('content'));
         } else {
-            return response()->view('404', [], 404);
+            return response()->view('404_' . $language, [], 404);
         }
     }
 
@@ -72,7 +72,7 @@ class ContentController extends Controller
         if($content) {
             return view('page', compact('content'));
         } else {
-            return response()->view('404', [], 404);
+            return response()->view('404_' . $language, [], 404);
         }
     }
 

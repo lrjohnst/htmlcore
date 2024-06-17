@@ -18,13 +18,13 @@ yarn-error.log
 /.idea
 /.vscode
 
-# Exclude all files in /storage/import/articles/ except example-articles.php
+# Exclude all files in /storage/import/articles/ except example_articles.php
 /storage/import/articles/*
-!/storage/import/articles/example-articles.php
+!/storage/import/articles/example_articles.php
 
-# Exclude all files in /storage/import/pages/ except example-pages.php
+# Exclude all files in /storage/import/pages/ except example_pages.php
 /storage/import/pages/*
-!/storage/import/pages/example-pages.php
+!/storage/import/pages/example_pages.php
 
 # Exclude all files in /resources/views/articles/ except new_york_architecture_18th_century.blade.php
 /resources/views/articles/*
@@ -33,3 +33,6 @@ yarn-error.log
 # Exclude all files in /resources/views/pages/ except front_page_en.blade.php
 /resources/views/pages/*
 !/resources/views/pages/front_page_en.blade.php
+!/resources/views/pages/articles.blade.php
+!/resources/views/pages/artikelen.blade.php
+!/resources/views/pages/voorpagina_nl.blade.php

@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('content_id')->constrained()->onDelete('cascade');
+            $table->string('page_title', 255)->nullable()->comment('Provide the title of the page.');
             $table->dateTime('publication_date')->nullable()->comment('');
             $table->dateTime('edit_date')->nullable()->comment('');
             $table->string('view_name', 255)->nullable()->comment('');
