@@ -1,0 +1,35 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# Exclude all files in /storage/import/articles/ except example_articles.php
+/storage/import/articles/*
+!/storage/import/articles/example_articles.php
+
+# Exclude all files in /storage/import/pages/ except example_pages.php
+/storage/import/pages/*
+!/storage/import/pages/example_pages.php
+
+# Ignore all files under /resources/views including subdirectories ./pages and ./articles
+/resources/views/*
+/resources/views/pages/*
+/resources/views/articles/*
+
+# But do not ignore directories within /resources/views
+!/resources/views/*/
