@@ -1,4 +1,9 @@
 # Changelog
+## Version: v1.0.1 [Untracked all view files]
+Date: 2024-06-17
+Collaborators: Lucas Johnston
+### Description:
+It's not functional to have any view files tracked, so they're now untracked. To-do: Create a demo data import tool.
 ## Version: v1.0.0 [Basic HTML-based CMS with import function]
 Date: 2024-06-17
 Collaborators: Lucas Johnston

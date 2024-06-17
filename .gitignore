@@ -26,13 +26,10 @@ yarn-error.log
 /storage/import/pages/*
 !/storage/import/pages/example_pages.php
 
-# Exclude all files in /resources/views/articles/ except new_york_architecture_18th_century.blade.php
-/resources/views/articles/*
-!/resources/views/articles/new_york_architecture_18th_century.blade.php
-
-# Exclude all files in /resources/views/pages/ except front_page_en.blade.php
+# Ignore all files under /resources/views including subdirectories ./pages and ./articles
+/resources/views/*
 /resources/views/pages/*
-!/resources/views/pages/front_page_en.blade.php
-!/resources/views/pages/articles.blade.php
-!/resources/views/pages/artikelen.blade.php
-!/resources/views/pages/voorpagina_nl.blade.php
+/resources/views/articles/*
+
+# But do not ignore directories within /resources/views
+!/resources/views/*/
