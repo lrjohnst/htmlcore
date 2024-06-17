@@ -21,7 +21,7 @@
 
 	<ul>
 		<li><a href="/">Home</a></li>
-		<li><a href="/artikelen">Artikelen</a></li>
+		<li><a href="/nl/artikelen">Artikelen</a></li>
 	</ul>
 
 </body>

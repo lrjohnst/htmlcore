@@ -1,13 +1,10 @@
 # Changelog
-## Version: v1.0.0 beta 1 [Acceptation testing]
+## Version: v1.0.0 [Basic HTML-based CMS with import function]
 Date: 2024-06-17
 Collaborators: Lucas Johnston
-## Description:
-First representative version.
-### Summary:
-- Multilanguage 404 pages.
-- Finalized example_pages.php and PageSeeder.
-## Deploy instructions:
+### Description:
+This first version contains a basic routing system and example pages to quickly set up a basic website. HtmlCore works with plain HTML templates for storage, reading, and editing content.
+### Deploy instructions:
 - Make sure there is a _/bootstrap/cache_ folder.
 - Make sure there is a _/storage/framework/sessions_ folder.
 - Make sure there is a _/storage/framework/cache_ folder.
@@ -17,6 +14,14 @@ First representative version.
 - Update the APP_NAME, APP_ENV, APP_DEBUG, APP_URL variables, and the database connection data in .env.
 - Run '''php artisan migrate'''
 - Run '''php artisan db:seed'''
+## Version: v1.0.0 beta 1 [Acceptation testing]
+Date: 2024-06-17
+Collaborators: Lucas Johnston
+### Description:
+First representative version.
+### Summary:
+- Multilanguage 404 pages.
+- Finalized example_pages.php and PageSeeder.
 ## Version: v1.0.0 pre-alpha 2 [HtmlCoreServiceProvider failsafe]
 Date: 2024-06-16
 Collaborators: Lucas Johnston
