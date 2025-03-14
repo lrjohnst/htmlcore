@@ -30,6 +30,7 @@ yarn-error.log
 /resources/views/*
 /resources/views/pages/*
 /resources/views/articles/*
+!/resources/views/404.blade.php
 
 # But do not ignore directories within /resources/views
 !/resources/views/*/

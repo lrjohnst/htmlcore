@@ -4,7 +4,7 @@
 return [
 
     /*
-     * Example setting description.
+     * Set the language for when no language was set by user.
      */
-    'example_setting' => "example_setting_value",
+    'fallback_language' => env("FALLBACK_LANGUAGE", 'en'),
 ];
