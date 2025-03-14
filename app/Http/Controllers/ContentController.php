@@ -80,6 +80,6 @@ class ContentController extends Controller
     private function getLanguageFromUrl(Request $request) {
         $path = $request->path();
         $segments = explode('/', $path);
-        return $segments[0]; // assuming the language is always the first segment
+        return $segments[0]; // Assuming the language is always the first segment
     }
 }
