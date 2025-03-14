@@ -38,10 +38,10 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $e)
     {
-        if ($e instanceof NotFoundHttpException) {
-            return response()->view('404', [], 404);
-        }
+//        if ($e instanceof NotFoundHttpException) {
+//            return response()->view('404_' . config('app.fallback_language'), [], 404);
+//        }
 
-        return parent::render($request, $e);
+//        return parent::render($request, $e);
     }
 }
