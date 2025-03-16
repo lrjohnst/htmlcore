@@ -1,4 +1,7 @@
 # Changelog
+## Version: v1.0.3 [Restored Exceptions/Handler.php]
+Date: 2025-03-16
+Collaborators: Lucas Johnston
 ## Version: v1.0.2 [Fallback language - 404 template and a Readme]
 Date: 2025-03-14
 Collaborators: Lucas Johnston
