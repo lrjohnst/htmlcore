@@ -3,8 +3,9 @@
 
 return [
 
+
     /*
-     * Set the language for when no language was set by user.
+     * Defines which languages are available for this site.
      */
-    'fallback_language' => env("FALLBACK_LANGUAGE", 'en'),
+    'available_languages' => explode(",", env("AVAILABLE_LANGUAGES", ['en', 'nl'])),
 ];

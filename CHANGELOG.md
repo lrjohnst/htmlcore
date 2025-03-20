@@ -1,4 +1,15 @@
 # Changelog
+## Version: v1.0.4 [Locale options and middleware]
+Date: 2025-03-20
+Collaborators: Lucas Johnston
+### Description:
+Improved the multilanguage functionality.
+### Summary
+- SetLanguage middleware now applies to all web.php routes. Selects language in following order of importance: (1) Get the language from the first segment of the requested URL, for instance: https://example.com/en results in 'en', (2) Get the preferred language from client's browser, (3) Get fallback language from environment file.
+- The application now uses built-in localization features: https://laravel.com/docs/11.x/localization.
+### Deploy instructions:
+- Add the ```APP_FALLBACK_LANGUAGE``` variable to the .env with a two-character ISO 3166 language code _(see env.example)_.
+- Add the ```AVAILABLE_LANGUAGES``` variable to the .env with a comma-separated list of two-character ISO 3166 language codes _(see env.example)_.
 ## Version: v1.0.3 [Restored Exceptions/Handler.php]
 Date: 2025-03-16
 Collaborators: Lucas Johnston

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Resource;
 use App\Models\Page;
+use Illuminate\Support\Facades\App;
 
 
 class ContentController extends Controller
@@ -13,7 +14,7 @@ class ContentController extends Controller
 
 
     public function showResource(Request $request, string $slug) {
-        $language = $this->getLanguageFromUrl($request);
+        $language = App::currentLocale();
 
         $content = Resource::select('resources.*', 'contents.*')
             ->join('contents', 'resources.content_id', '=', 'contents.id')
@@ -29,7 +30,7 @@ class ContentController extends Controller
     }
 
     public function showArticle(Request $request, string $slug) {
-        $language = $this->getLanguageFromUrl($request);
+        $language = App::currentLocale();
 
         $content = Article::select('articles.*', 'contents.*')
             ->join('contents', 'articles.content_id', '=', 'contents.id')
@@ -45,7 +46,7 @@ class ContentController extends Controller
     }
 
     public function showPage(Request $request, string $slug) {
-        $language = $this->getLanguageFromUrl($request);
+        $language = App::currentLocale();
 
         $content = Page::select('pages.*', 'contents.*')
             ->join('contents', 'pages.content_id', '=', 'contents.id')
@@ -61,7 +62,7 @@ class ContentController extends Controller
     }
 
     public function showFrontPage(Request $request) {
-        $language = $this->getLanguageFromUrl($request) ?: config('htmlcore.default_language');
+        $language = App::currentLocale();
 
         $content = Page::select('pages.*', 'contents.*')
             ->join('contents', 'pages.content_id', '=', 'contents.id')
@@ -74,12 +75,5 @@ class ContentController extends Controller
         } else {
             return response()->view('404_' . $language, [], 404);
         }
-    }
-
-
-    private function getLanguageFromUrl(Request $request) {
-        $path = $request->path();
-        $segments = explode('/', $path);
-        return $segments[0]; // Assuming the language is always the first segment
     }
 }
